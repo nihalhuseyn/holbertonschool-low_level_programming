@@ -1,4 +1,4 @@
-void print_line(int n);
+#include "main.h"
 
 /**
  * main - check the code
