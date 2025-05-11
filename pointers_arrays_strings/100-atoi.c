@@ -1,33 +1,39 @@
 #include "main.h"
+
 /**
- * _atoi - check the code
- * @s: - input of function
- * Return: Always 0.
+ * _atoi - converts str to int
+ * @s: str
+ * Return: return
+ *
  */
 int _atoi(char *s)
 {
-int i = 0, sign = 1;
-unsigned int num = 0;
-while (s[i] != '\0')
-{
-if (s[i] == 45)
-{
-sign = sign * -1;
-}
-if (s[i] >= 48 && s[i] <= 57)
-{
-num = num * 10;
-num = num + s[i] - 48;
-}
-else
-{
-if (num != 0)
-{
-break;
-}
-}
-i++;
-}
-num *= sign;
-return (num);
+	int i = 0;
+	int m = 0;
+
+	unsigned int n = 0;
+
+	while (*(s + i) != 0)
+	{
+		if (*(s + i) == 45)
+		{
+			m++;
+		}
+
+		if (*(s + i) >= 48 && *(s + i) <= 57)
+		{
+			n = n * 10 + (*(s + i) - 48);
+
+			if (*(s + i + 1) < 48 || *(s + i + 1) > 57)
+			{
+				break;
+			}
+		}
+		i++;
+	}
+	if (m % 2 == 1)
+	{
+		n = -n;
+	}
+	return (n);
 }

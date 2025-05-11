@@ -1,16 +1,19 @@
 #include "main.h"
+
 /**
- * _puts - Entry point
- * @str: description for str
- *
- * Return: Always 0 (Success)
+ * _puts - prints str
+ * @str: char
+ * Return: just a return
  */
+
 void _puts(char *str)
 {
-	while (*str)
+	int i = 0;
+
+	while (*(str + i) != 0)
 	{
-		_putchar(*str);
-		str++;
+		_putchar(*(str + i));
+		i++;
 	}
 	_putchar('\n');
 }

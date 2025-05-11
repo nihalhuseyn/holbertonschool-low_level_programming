@@ -1,16 +1,16 @@
 #include "main.h"
+
 /**
- * swap_int - Entry point
- * @a: description for a
- * @b: description for b
- *
- * Return: Always 0 (Success)
+ * swap_int - function that swaps the values of two integers
+ * @a: pointer to the first integer
+ * @b: pointer to the second integer
+ * Return Always 0 (Success)
  */
 void swap_int(int *a, int *b)
 {
-	int d;
+	int tas;
 
-	d = *a;
+	tas = *a;
 	*a = *b;
-	*b = d;
+	*b = tas;
 }

@@ -1,42 +1,32 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * _strncpy - check the code
- * @dest: - input of function
- * @src: - src
- * @n: - n
- * Return: Always 0.
+ * _strncpy - copies str
+ * @dest: destination
+ * @src: source
+ * @n: counter
+ *
+ * Return: int
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
+	int i = 0;
+	int j = 0;
 
-	int a = 0, b = 0, c = 0;
-
-	while (a < n)
+	while (j + i < n)
 	{
-		dest[a] = '\0';
-		a++;
-	}
-
-	while (src[c] != '\0')
-	{
-		c++;
-	}
-
-	if (n > c)
-	{
-		n = c;
-	}
-
-	while (b < n)
-	{
-		if (src[0] == '\0')
+		if (*(src + j) != '\0')
 		{
-			break;
+			*(dest + j) = *(src + j);
+			j++;
 		}
-
-		*(dest + b) = *(src + b);
-		b++;
+		else
+		{
+			*(dest + j + i) = '\0';
+			i++;
+		}
 	}
-
 	return (dest);
 }
